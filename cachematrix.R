@@ -1,7 +1,8 @@
+## Below are two functions that cache the inverse of a matrix.
 ## The function below enable R to cache potentially time consuming computations. 
 ## Here a matrix & its inverses are cached using the superassignment operator.
 
-## This function creates a special matrix that will cashe its inverse.
+## This function creates a special matrix object that will cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL                                 ###
@@ -32,5 +33,5 @@ cacheSolve <- function(x, ...) {
   matrix <- x$get()
   m <- solve(matrix, ...)
   x$setmatrix(m)
-  m     ## Return a matrix that is the inverse of 'x'
+  m     
 }
